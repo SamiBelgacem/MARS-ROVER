@@ -36,6 +36,9 @@ public class Rover {
 		}
 		return Rover.gridLimitLocation;
 	}
+	public static Location getGridLimitLocation() {
+		return gridLimitLocation;
+	}
 
 	// public method process used to execute many instructions
     public void process(String instructions) {
