@@ -32,9 +32,9 @@ public class Location {
         return this.x <= xLimit && this.y <= yLimit;
     }
     /*
-     * Check if the this location is out of the grid limit of (xLimit,yLimit)
+     * Check if the this location is not out of the grid limit of (xLimit,yLimit)
      */
-    public boolean isOutside(int xLimit, int yLimit) {
+    public boolean isNotOutside(int xLimit, int yLimit) {
         return this.x >= xLimit && this.y >= yLimit;
     }
     
@@ -42,7 +42,7 @@ public class Location {
      * Check if the new location is a valid move or not
      */
     public boolean isValidMove(Location newLocation) {
-        return newLocation.isWithIn(x, y) && newLocation.isOutside(0, 0);
+        return newLocation.isWithIn(x, y) && newLocation.isNotOutside(0, 0);
     }
     
     @Override

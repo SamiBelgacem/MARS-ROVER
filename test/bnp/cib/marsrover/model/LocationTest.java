@@ -42,14 +42,14 @@ public class LocationTest {
         assertFalse(location.isWithIn(5, 5));
     }
      @Test
-    public void shouldReturnTrueWhenLocationIsOutsideGivenCoordinates() {
+    public void shouldReturnTrueWhenLocationIsNotOutsideGivenCoordinates() {
     	Location location = new Location(1, 2);
-        assertTrue(location.isOutside(0, 0));
+        assertTrue(location.isNotOutside(0, 0));
     }
 
     @Test
-    public void shouldReturnFalseWhenLocationIsNotOutsideGivenCoordinates() {
+    public void shouldReturnFalseWhenLocationIsOutsideGivenCoordinates() {
     	Location location = new Location(-1, 2);
-        assertFalse(location.isOutside(0, 0));
+        assertFalse(location.isNotOutside(0, 0));
     }
 }
